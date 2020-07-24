@@ -4,9 +4,9 @@ from sklearn.linear_model import PassiveAggressiveClassifier
 import joblib
 
 # load the model from disk
-filename = 'model/model.pkl'
+filename = 'model/passive.pkl'
 clf = joblib.load(open(filename, 'rb'))
-cv  = joblib.load(open('model/tfidfvect.pkl','rb'))
+cv  = joblib.load(open('model/countvec.pkl','rb'))
 app = Flask(__name__)
 
 def trim(url):
